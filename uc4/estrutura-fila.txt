@@ -1,6 +1,8 @@
 
 
-```pascal
+```
+// Programa implementado através da estrutura de fila, seguindo o conceito FIFO (First In, F Out) e tratado para que não aconteça o estouro da estrutura homogênea. 
+
 programa
 {
 	cadeia filaNome[3]
@@ -151,3 +153,4 @@ funcao inicio()
 
 
 ​		
+
