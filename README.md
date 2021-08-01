@@ -1,2 +1,2 @@
-# colecao-atividades-tecnico-senai
-Repositório reunindo os exercícios praticados durante o curso técnico de Desenvolvimento de Sistemas no SENAI
+# Curso Técnico de Desenvolvimento de Sistemas do Senai - Lista de Atividades 
+Repositório reunindo os exercícios praticados durante o curso, além de práticas extras para fixação de conteúdo. 
