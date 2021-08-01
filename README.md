@@ -3,4 +3,4 @@ Repositório reunindo os exercícios praticados durante o curso, além de práti
 <p> Inciamente, as atividades foram desenvolvidas em pseudo-linguagem, utilizando o Portugol Studio.</p>
 
 ## Links Úteis
-[Link para download do Portugol Studio](http://lite.acad.univali.br/portugol/)
+[Portugol Studio - Download](http://lite.acad.univali.br/portugol/)
