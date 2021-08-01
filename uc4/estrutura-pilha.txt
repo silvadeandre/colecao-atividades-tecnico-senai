@@ -1,11 +1,6 @@
 
-
-```pascal
-/*
- Programa implementado através da estrutura de Pilha, 
- seguindo o conceito FILO (First In, Last Out) e tratado 
- para que não aconteça o estouro da estrutura homogênea. 
- */
+// Programa implementado através da estrutura de Pilha, seguindo o conceito FILO (First In, Last Out) e tratado para que não aconteça o estouro da estrutura homogênea. 
+ 
 
 programa
 {
