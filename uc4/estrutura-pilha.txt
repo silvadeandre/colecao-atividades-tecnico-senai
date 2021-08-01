@@ -1,0 +1,146 @@
+
+
+```pascal
+/*
+ Programa implementado através da estrutura de Pilha, 
+ seguindo o conceito FILO (First In, Last Out) e tratado 
+ para que não aconteça o estouro da estrutura homogênea. 
+ */
+
+programa
+{
+	inteiro topo = 0, maximo = 2
+	cadeia pilhaNome[3], achado
+
+funcao tracejado() {
+	escreva("--------")
+}
+
+funcao push () { // inclui um elemento na pilha
+	se (topo < 0) { // define o topo caso fique -1 após limpar todos os elementos
+		topo = 0
+	}
+	se (topo <= maximo) {	
+		limpa()						
+		tracejado()
+		escreva(" CADASTRO DE USUÁRIO ")
+		tracejado()
+		escreva("\n")
+		escreva ("Nome: ")
+		leia (pilhaNome[topo])
+		topo++
+		push()
+	} senao {
+		limpa()
+		escreva("A lista de usuários está cheia!\n\n")
+	}
+ }
+
+funcao pop() { // remove o último elemento da pilha
+	limpa()
+
+	se (topo > maximo) {
+		topo = maximo
+	}
+	se (is_empty() == falso) {
+		pilhaNome[topo] = ""
+		topo--
+		escreva("Usuário Apagado!\n\n")
+	} senao {
+		limpa()
+		escreva("Lista de usuários vazia!\n\n")
+	}
+}
+
+funcao esvaziar () { // remove todos os elementos da pilha
+	limpa()
+	escreva("Todos os elementos foram removidos!\n\n")
+	se (topo > maximo) {
+		topo = maximo
+	}
+	se (topo >= 0) {
+		pilhaNome[topo] = ""
+		topo--
+		esvaziar()
+	}										
+}
+
+funcao listar() { // lista todos os elementos da pilha
+	limpa()
+	tracejado()
+	escreva(" Lista de Usuários ")
+	tracejado()
+	escreva("\n")
+	
+	inteiro i
+	para (i = maximo; i >= 0; i--) {
+		se (pilhaNome[i] != "") {	
+			escreva(i + 1 + "º - " + pilhaNome[i] + "\n")
+		} 
+	}
+	escreva("\n")
+}
+
+funcao logico is_empty() { // verifica se existe algum elemento na pilha
+	limpa()
+	
+	se (topo < 0) {
+		retorne verdadeiro
+	} senao 
+		retorne falso
+}
+
+funcao inicio()
+{
+	inteiro opcao
+	logico analisa
+
+        faca {
+            tracejado()
+            escreva(" MENU DE OPÇÕES ")
+            tracejado()
+            escreva("\n")
+            escreva("[1] Empilhar\n")
+            escreva("[2] Desempilhar\n")
+            escreva("[3] Limpar\n")
+            escreva("[4] Listar\n")
+            escreva("[5] Vazia\n")
+            escreva("[0] Sair\n\n")
+            escreva ("Escolha a sua opção: ")
+            leia (opcao)
+
+            escolha(opcao) {
+                caso 1:					
+                    push()
+                pare
+
+                caso 2:
+                    pop()
+                pare
+
+                caso 3:
+                    esvaziar()
+                pare
+
+                caso 4:
+                    listar()
+                pare
+
+                caso 5:					
+                    analisa = is_empty()
+                    se (analisa == verdadeiro) {
+                        escreva("Pilha vazia!\n\n")
+                    } senao {
+                        escreva("A pilha não está vazia!\n\n")
+                    }
+                pare
+
+                caso contrario:  
+                limpa()
+                escreva("Programa Finalizado!\n\n")
+            }
+
+        } enquanto (opcao != 0)
+	}
+}
+```
